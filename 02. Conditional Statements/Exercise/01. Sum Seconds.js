@@ -6,9 +6,9 @@ function sumSeconds(data) {
 
     let result = player1 + player2 + player3
     let hours = Math.floor(result / 60)
-    let minutes = result % 60 + ""
+    let minutes = result % 60
     
-    if (minutes.length < 2) {
+    if (minutes < 10) {
         minutes = "0" + minutes
     }
 
