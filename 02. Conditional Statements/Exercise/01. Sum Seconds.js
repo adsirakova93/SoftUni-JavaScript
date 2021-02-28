@@ -4,12 +4,12 @@ function sumSeconds(data) {
     let player2 = Number(data[1]);
     let player3 = Number(data[2]);
 
-    let result = player1 + player2 + player3
-    let hours = Math.floor(result / 60)
-    let minutes = result % 60
+    let result = player1 + player2 + player3;
+    let hours = Math.floor(result / 60);
+    let minutes = result % 60;
     
     if (minutes < 10) {
-        minutes = "0" + minutes
+        minutes = "0" + minutes;
     }
 
     console.log(hours + ":" + minutes)
