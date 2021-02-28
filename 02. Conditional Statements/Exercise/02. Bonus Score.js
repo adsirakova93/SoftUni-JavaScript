@@ -1,6 +1,6 @@
 function bonusScore(points) {
 
-    let num = Number(points[0]);
+    let num = Number(points);
     let bonusPoints = 0.0;
 
     if (num <= 100) {
