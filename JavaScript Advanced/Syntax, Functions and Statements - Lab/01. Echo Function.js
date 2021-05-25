@@ -1,6 +1,6 @@
 function getString(data) {
-    var strings = (data);
-    var n = strings.length;
+    let strings = data.length
+    let n = strings.length;
     console.log(n)
     console.log(strings)
 }
