@@ -1,8 +1,7 @@
 function getString(data) {
-    let strings = data.length
-    let n = strings.length;
-    console.log(n)
-    console.log(strings)
+    let stringLenght = data.length
+    console.log(stringLenght);
+    console.log(data)
 }
 
 getString('Hello, JavaScript!')
