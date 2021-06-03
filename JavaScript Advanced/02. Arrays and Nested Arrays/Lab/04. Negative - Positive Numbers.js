@@ -2,13 +2,10 @@ function sortArray(array) {
     const newArray = [];
 
     for (let el of array) {
-        if (Number(el) < 0) {
-            newArray.unshift(10);
-        } else if (Number(el) >= 0) {
-            newArray.shift();
-        }
+        if (el < 0) {newArray.unshift(el);} 
+        else {newArray.push(el);}
     }
-    console.log(newArray)
+    console.log(newArray.join('\n'))
 }
 
 
