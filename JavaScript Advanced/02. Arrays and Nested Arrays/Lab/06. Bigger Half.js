@@ -1,8 +1,8 @@
 function solve(data) {
+    let result;
     data.sort((a, b) => a - b);
-    const middle = Math.floor(data.length / 2);
-    const result = data.slice(middle);
-
+    let middle = Math.floor(data.length / 2);
+    result = data.slice(middle);
     return result;
 }
 
