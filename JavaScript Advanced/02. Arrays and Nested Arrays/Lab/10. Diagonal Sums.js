@@ -1,12 +1,11 @@
 function solve(matrix) {
     let sum1 = 0;
     let sum2 = 0;
-    let matrixLength = matrix[0].length
     let result = [];
 
-    for (let index = 0; index < matrixLength; index++) {
+    for (let index = 0; index < matrix.length; index++) {
         sum1 += matrix[index][index];
-        sum2 += matrix[index][(matrixLength - 1) - index];
+        sum2 += matrix[index][(matrix.length - 1) - index];
     }
     
     result.push(sum1);
