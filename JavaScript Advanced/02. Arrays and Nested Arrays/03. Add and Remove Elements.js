@@ -6,17 +6,20 @@ function addOrRemove(command) {
 
         if (command[i] === 'add') {
             newArray.push(num);
-            num += 1;
         } else if (command[i] === 'remove') {
             newArray.pop();
-            num += 1;
         }
+        num += 1;
     }
-    return newArray;
+    if (newArray.length === 0){
+        return 'Empty'
+    }
+    return newArray.join('\n');
 }
 
 console.log(addOrRemove(['add', 'add', 'add', 'add']));
-console.log(addOrRemove(['add', 'add', 'remove', 'add', 'add']))
+console.log(addOrRemove(['add', 'add', 'remove', 'add', 'add']));
+console.log(addOrRemove(['remove', 'remove', 'remove']))
 
 
 
