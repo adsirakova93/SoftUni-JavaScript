@@ -1,16 +1,22 @@
 function addOrRemove(command) {
-    newArray = [];
+    let newArray = [];
+    let num = 1;
 
     for (let i = 0; i < command.length; i++) {
-        num = 1;
+
         if (command[i] === 'add') {
             newArray.push(num);
             num += 1;
         } else if (command[i] === 'remove') {
-            newArray.pop()
+            newArray.pop();
+            num += 1;
         }
     }
-    return newArray
+    return newArray;
 }
 
-console.log(addOrRemove(['add', 'add', 'add', 'add']))
+console.log(addOrRemove(['add', 'add', 'add', 'add']));
+console.log(addOrRemove(['add', 'add', 'remove', 'add', 'add']))
+
+
+
