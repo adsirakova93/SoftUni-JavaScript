@@ -2,7 +2,7 @@ function solve(array) {
     output = {};
     for (let i = 0; i < array.length - 1; i += 2) {
         let product = array[i];
-        let calories = array[i + 1];
+        let calories = Number(array[i + 1]);
         output[product] = calories;
     }
     return output;
