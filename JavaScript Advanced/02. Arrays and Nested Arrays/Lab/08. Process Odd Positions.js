@@ -1,5 +1,6 @@
-function solve(numbers){
+function solve(numbers) {
     let newNumbers = [];
+
     for (let i = 0; i < numbers.length; i++) {
         if (i % 2 != 0) {
             newNumbers.push(numbers[i] * 2)
