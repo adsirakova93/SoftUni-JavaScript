@@ -1,20 +1,20 @@
 function calculator(num1, num2, operator) {
-    let result = ""
+    let result = "";
 
-    if (operator == "+"){
+    if (operator == "+") {
         result = num1 + num2;
-    } else if (operator == "-"){
+    } else if (operator == "-") {
         result = num1 - num2;
-    } else if (operator == "*"){
+    } else if (operator == "*") {
         result = num1 * num2;
     } else if (operator == "/") {
-        results = num1 / num2;
+        result = num1 / num2;
     } else if (operator == "%") {
         result = num1 % num2;
     } else if (operator == "**") {
         result = num1 ** num2;
     }
-    console.log(result)
+    console.log(result);
 }
 
 calculator(5, 6, '+')

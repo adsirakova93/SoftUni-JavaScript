@@ -4,9 +4,9 @@ function sumOfNumbers(num1, num2) {
     let result = 0;
 
     for (let i = number1; i <= number2; i++) {
-        result += i
+        result += i;
     }
-    console.log(result)
+    console.log(result);
 }
 
 sumOfNumbers('1', '5')
