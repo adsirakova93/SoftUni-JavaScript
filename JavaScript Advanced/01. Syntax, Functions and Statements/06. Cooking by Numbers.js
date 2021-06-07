@@ -1,21 +1,24 @@
 function solve(array) {
-    let num = Number(array[0]);
-    let newArray = array.slice(1)
-    newArray.forEach(element => {
-        if (element == 'chop') {
-            num /= 2;
-        } else if (element == 'dice') {
-            num = Math.sqrt(num);
-        } else if (element == 'spice') {
-            num += 1;
-        } else if (element == 'bake') {
-            num *= 3;
-        } else {
-            num *= 0.8;
+    let [num, ...commands] = array
+    let nums = Number(num);
+    let result = [];
+
+    for (let element of commands) {
+        if (element === 'chop') {
+            nums /= 2;
+        } else if (element === 'dice') {
+            nums = Math.sqrt(nums);
+        } else if (element === 'spice') {
+            nums += 1;
+        } else if (element === 'bake') {
+            nums *= 3;
+        } else if (element === 'fillet') {
+            nums *= 0.8;
         }
-        console.log(num);
-    });
+        result.push(nums);
+    }
+    return result.join('\n')
 }
 
-solve(['32', 'chop', 'chop', 'chop', 'chop', 'chop']);
-// solve(['9', 'dice', 'spice', 'chop', 'bake', 'fillet']);
+// console.log(solve(['32', 'chop', 'chop', 'chop', 'chop', 'chop']));
+console.log(solve(['9', 'dice', 'spice', 'chop', 'bake', 'fillet']))

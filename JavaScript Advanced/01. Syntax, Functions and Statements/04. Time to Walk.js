@@ -8,9 +8,9 @@ function timeToWalk(steps, stepLength, speed) {
     let totalseconds = Math.ceil(secondsNeeded + (breaks * 60))
 
     let result = new Date(totalseconds * 1000).toISOString().substr(11, 8);
-    console.log(result)
+    return result
 }
 
 
-timeToWalk(4000, 0.60, 5)
-timeToWalk(2564, 0.70, 5.5)
+console.log(timeToWalk(4000, 0.60, 5));
+console.log(timeToWalk(2564, 0.70, 5.5));

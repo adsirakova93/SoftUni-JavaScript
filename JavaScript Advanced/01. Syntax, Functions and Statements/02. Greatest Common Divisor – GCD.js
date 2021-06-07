@@ -1,15 +1,13 @@
-function gcd_rec(a, b) {
+function solve(a, b) {
     result = 0;
 
     if (b) {
-        result = gcd_rec(b, a % b);
+        result = solve(b, a % b);
     } else {
         result = Math.abs(a);
-    
-    console.log(result)
     }
-    
+    return result
 }
 
-gcd_rec(15, 5)
-gcd_rec(2154, 458)
+console.log(solve(15, 5));
+console.log(solve(2154, 458));
