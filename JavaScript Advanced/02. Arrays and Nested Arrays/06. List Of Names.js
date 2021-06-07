@@ -6,4 +6,4 @@ function sortingNames(names) {
     }
 }
 
-sortingNames(["John", "Bob", "Christina", "Ema", "Bob"])
+sortingNames(["John", "Bob", "Christina", "Ema"])
