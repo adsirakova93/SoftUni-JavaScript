@@ -1,10 +1,11 @@
-function crew(weight, experience, levelOfHydrated, dizziness) {
-    return {
-        weight,
-        experience,
-        levelOfHydrated,
-        dizziness,
-    }
+function crew(data) {
+    let worker = {
+        weight: crew[weigth],
+        experience: data[2],
+        levelOfHydrated: data[3],
+        dizziness: data[3],
+    };
+    return worker;
 }
 
 
