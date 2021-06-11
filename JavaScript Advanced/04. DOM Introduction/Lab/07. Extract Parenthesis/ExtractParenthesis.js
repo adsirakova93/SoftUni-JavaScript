@@ -1,8 +1,7 @@
-function extract(content) {
+function extract() {
 
     let result = [];
-    let contentElement = content;
-    let buttonElement = document.querySelector('button')[0];
+    let contentElement = document.getElementById('content');
     let contentElementText = contentElement.textContent;
 
     let txt = contentElementText;
@@ -10,5 +9,5 @@ function extract(content) {
     for (let i = 1; i < newTxt.length; i++) {
     result.push(newTxt[i].split(')')[0] + '; ');
     };
-    console.log(result.join(''))
+    return result.join('')
 }
