@@ -1,13 +1,13 @@
 function toggle() {
     let buttonElement = document.getElementById('accordion');
-    let textToChange = buttonElement.firstElementChild.firstElementChild.textContent;
+    let textToChange = buttonElement.firstElementChild.firstElementChild;
     let pannelWithText = document.getElementById('extra');
 
-    if (textToChange == "More") {
-        pannelWithText.style.display = 'inline';
-        console.log(textToChange)
-        textToChange.value = 'Less';
-    }
-
-
-}   
+    if (textToChange.textContent == 'More') {
+        pannelWithText.style.display = 'block';
+        textToChange.textContent = 'Less';
+    } else {
+        pannelWithText.style.display = 'none';
+        textToChange.textContent = 'More';
+    };
+}
