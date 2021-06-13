@@ -1,18 +1,13 @@
 function sortNums(array) {
     let newArray = [];
     array.sort((a, b) => a - b);
-    
-    while (array.length > 0) {
-        let minNum = Math.min(...array);
-        let maxNum = Math.max(...array);
-        newArray.push(minNum);
-        array.shift();
-        newArray.push(maxNum);
-        array.pop();
-    } 
 
-    newArray.concat(array)
-
+    while (array.length) {
+        newArray.push(array.shift());
+        if (array.length > 0) {
+            newArray.push(array.pop())
+        }
+    }
     return newArray
 }
 
