@@ -9,8 +9,9 @@ function solve(matrix) {
         cow.push(sum);
     }
     return cow.concat(row).every((el, i, arr) => el === arr[0]);
-
 }
+
+
 console.log(solve([
     [4, 5, 6],
     [6, 5, 4],
