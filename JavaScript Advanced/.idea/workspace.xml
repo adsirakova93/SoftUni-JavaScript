@@ -1,6 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3e7c6c2e-f883-4b2e-9b57-f575b5b11568" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/03. Objects and Composition/Exercise/08. Rectangle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03. Objects and Composition/01. Calorie Object.js" beforeDir="false" afterPath="$PROJECT_DIR$/03. Objects and Composition/Exercise/01. Calorie Object.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03. Objects and Composition/02. Construction Crew.js" beforeDir="false" afterPath="$PROJECT_DIR$/03. Objects and Composition/Exercise/02. Construction Crew.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03. Objects and Composition/03. Car Factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/03. Objects and Composition/Exercise/03. Car Factory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03. Objects and Composition/04. Heroic Inventory.js" beforeDir="false" afterPath="$PROJECT_DIR$/03. Objects and Composition/Exercise/04. Heroic Inventory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03. Objects and Composition/05. Lowest Prices in Cities.js" beforeDir="false" afterPath="$PROJECT_DIR$/03. Objects and Composition/Exercise/05. Lowest Prices in Cities.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03. Objects and Composition/06. Store Catalogue.js" beforeDir="false" afterPath="$PROJECT_DIR$/03. Objects and Composition/Exercise/06. Store Catalogue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03. Objects and Composition/07. Towns to JSON.js" beforeDir="false" afterPath="$PROJECT_DIR$/03. Objects and Composition/Exercise/07. Towns to JSON.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03. Objects and Composition/09. Sorted List.js" beforeDir="false" afterPath="$PROJECT_DIR$/03. Objects and Composition/Exercise/09. Sorted List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03. Objects and Composition/10. Heroes.js" beforeDir="false" afterPath="$PROJECT_DIR$/03. Objects and Composition/Exercise/10. Heroes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03. Objects and Composition/11. Jan's Notation.js" beforeDir="false" afterPath="$PROJECT_DIR$/03. Objects and Composition/Exercise/11. Jan's Notation.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1uSNgtZr0ehQEFs6mBq8dAJe07U" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kalin\Desktop\GitHub\SoftUni-JavaScript\JavaScript Advanced\03. Objects and Composition\Exercise" />
+      <recent name="C:\Users\Kalin\Desktop\GitHub\SoftUni-JavaScript\JavaScript Advanced\01. Syntax, Functions and Statements\Exercise" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3e7c6c2e-f883-4b2e-9b57-f575b5b11568" name="Default Changelist" comment="" />
+      <created>1624655144307</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624655144307</updated>
+      <workItem from="1624655145536" duration="453000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
