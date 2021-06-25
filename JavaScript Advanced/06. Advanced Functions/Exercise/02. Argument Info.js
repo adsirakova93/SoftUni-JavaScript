@@ -10,9 +10,12 @@ function solve(...arguments) {
         summary[types] += 1;
     }
 
+
+
     for (const summaryElement of Object.entries(summary)) {
         console.log(summaryElement.join(' = '))
     }
 }
 
 // solve('cat', 42, 54, function () { console.log('Hello world!'); })
+solve({ name: 'bob'}, 3.333, 9.999)
