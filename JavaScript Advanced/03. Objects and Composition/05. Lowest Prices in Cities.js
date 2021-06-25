@@ -3,7 +3,7 @@ function solve(input) {
     for (const each of input) {
         let [town, productName, price] = each.split(' | ');
         price = Number(price);
-        if (!products[productName])z {
+        if (!products[productName]) {
             products[productName] = {};
         }
         products[productName][town] = price;
