@@ -3,18 +3,8 @@ function heroes(array) {
     for (let index = 0; index < array.length; index++) {
         let [name, level, items] = array[index].split(' / ')
         level = Number(level);
-
-        if (!items) {
-            items = [];
-        } else {
-            items = items.split(', ');
-        }
-        
-        obj = { 
-            name: name, 
-            level: level,
-            items: items, 
-        }
+        items = items ? items.split(', ') : [];
+        obj = { name: name, level: level, items: items, }
         newArray.push(obj);
     }
     return JSON.stringify(newArray)
