@@ -28,7 +28,7 @@ function createCar(car) {
         wheels: car.wheelsize,    
     }
     
-    return newCar.carriage
+    return newCar
 }
 
 
