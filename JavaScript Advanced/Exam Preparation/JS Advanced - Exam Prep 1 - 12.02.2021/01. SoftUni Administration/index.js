@@ -14,7 +14,7 @@ function solve() {
     let correctedDate = date.replace(/-/g, '/');
     let dateString = `${correctedDate} - ${time}`;
 
-    if (!lectureName || !lectureDate || lectureModule == "Select module") {
+    if (!lectureName || !lectureDate || lectureModule === "Select module") {
       return;
     };
 
@@ -68,11 +68,22 @@ function solve() {
 
     // Delete lectures VERY GOOD APPROACH!
     document.addEventListener('click', (e) => {
-      if (e.target.tagName !== 'BUTTON') {
+      
+      let delButton = e.target;
+      let li = delButton.parentNode;
+      let ul = li.parentNode;
+      let moduleDiv = ul.parentNode;
+
+      if (delButton.tagName !== 'BUTTON') {
         return; 
       }
-      if (e.target.textContent === 'Del') {
-        e.target.parentNode.remove();
+      if (delButton.textContent === 'Del') {
+        li.remove();
+
+        // Delete the whole module if empty
+        if (ul.children.length === 0) {
+          moduleDiv.remove();
+        }
       }
     });
 
