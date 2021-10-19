@@ -14,6 +14,7 @@ function solution() {
         let giftUi = giftPannel.querySelector('ul');
         let newGiftLi = document.createElement('li');
         newGiftLi.classList.add('gift');
+        newGiftLi.classList.add('giftName');
         newGiftLi.textContent = giftName;
         
         let sendButton = document.createElement('button');
@@ -27,15 +28,15 @@ function solution() {
         giftUi.appendChild(newGiftLi);
         sendButton.addEventListener('click', () => sendingEl(giftName));
         discardButton.addEventListener('click', () => discardingEl(giftName))
-    
         let allLis = Array.from(document.querySelectorAll('.gift'));
         allLis
         .sort((a, b) => a.textContent.localeCompare(b.textContent))
         .forEach(li => giftUi.appendChild(li)
-        );
+        );       
     }
     
     function sendingEl(giftName) {
+        document.querySelector('.giftName').remove();
         let sentPannel = document.querySelectorAll('section')[2];
         let currentUl = sentPannel.querySelector('ul');
         let newLi = document.createElement('li');
@@ -44,6 +45,7 @@ function solution() {
     }
     
     function discardingEl(giftName) {
+        document.querySelector('.giftName').remove();
         let sentPannel2 = document.querySelectorAll('section')[3];
         let currentUl2 = sentPannel2.querySelector('ul');
         let newLi2 = document.createElement('li');
