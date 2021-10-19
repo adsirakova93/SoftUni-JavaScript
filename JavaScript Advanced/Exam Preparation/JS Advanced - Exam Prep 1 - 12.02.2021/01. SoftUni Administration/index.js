@@ -23,6 +23,7 @@ function solve() {
     liElement.classList.add('flex');
     let headElement = document.createElement('h4');
     headElement.textContent = `${lectureName} - ${dateString}`;
+    headElement.classList.add(dateString.split(' - ')[0]);
     let buttonElement = document.createElement('button');
     buttonElement.classList.add('red');
     buttonElement.textContent = 'Del';
@@ -34,18 +35,19 @@ function solve() {
     let newhead3Element = document.createElement('h3');
     newhead3Element.textContent = `${lectureModule.toUpperCase()}-MODULE`;
   
-    // BRAVO !!!
-    for (const i of checkh3) {
+    // Find the current modele and work inside it
+    for (let i of checkh3) {
       if (i.textContent == newhead3Element.textContent) {
-        let keyElement = i.nextElementSibling;
-        keyElement.appendChild(liElement);
+        let keyUlElement = i.nextElementSibling;
+        keyUlElement.appendChild(liElement);
 
         // Sorting
-        // let findAllLiElements = Array.from(i.nextElementSibling.children);
-
-        // findAllLiElements
-        //   .sort((a,b) => a.firstChild.textContent.localeCompare(b.firstChild.textContent))
-        //   .forEach(li => keyElement.appendChild(li))
+        let newKeyUlElement = document.createElement('ul');
+        // console.log(keyUlElement.childNodes[0].childNodes[0].textContent);
+        let listOfLi = Array.from(keyUlElement.childNodes);
+          listOfLi
+          .sort((a, b) => a.childNodes[0].className.localeCompare(b.childNodes[0].className))
+          .forEach(every => keyUlElement.appendChild(every))
         return;
       }
     };
@@ -68,11 +70,10 @@ function solve() {
 
     // Delete lectures VERY GOOD APPROACH!
     document.addEventListener('click', (e) => {
-      
+
       let delButton = e.target;
       let li = delButton.parentNode;
       let ul = li.parentNode;
-      let moduleDiv = ul.parentNode;
 
       if (delButton.tagName !== 'BUTTON') {
         return; 
@@ -82,7 +83,7 @@ function solve() {
 
         // Delete the whole module if empty
         if (ul.children.length === 0) {
-          moduleDiv.remove();
+          ul.parentNode.remove();
         }
       }
     });
