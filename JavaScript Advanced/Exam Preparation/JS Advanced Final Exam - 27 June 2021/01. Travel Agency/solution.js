@@ -2,6 +2,8 @@ window.addEventListener('load', solution);
 
 function solution() {
 
+  myFunction();
+
   let submitBtn = document.querySelector('#submitBTN');
   submitBtn.addEventListener('click', (e)=> {
     e.preventDefault();
@@ -10,44 +12,50 @@ function solution() {
     let name = nameEl.value;
     let emailEl = document.querySelector('#email');
     let email = emailEl.value;
-    let phoneEl = document.querySelector('#phone');
-    let phone = phoneEl.value;
-    let addressEl = document.querySelector('#address');
-    let address = addressEl.value;
-    let postEl = document.querySelector('#code');
-    let post = postEl.value;
 
-    let newName = document.createElement('li');
-    newName.textContent = `Full Name: ${name}`;
-    let newEmail = document.createElement('li');
-    newEmail.textContent = `Email: ${email}`;
-    let newPhone = document.createElement('li');
-    newPhone.textContent = `Phone Number: ${phone}`;
-    let newAddress = document.createElement('li');
-    newAddress.textContent = `Address: ${address}`;
-    let newPost = document.createElement('li');
-    newPost.textContent = `Postal Code: ${post}`;
+    if (nameEl.value && emailEl.value) {
 
-    let infoPreviewUl = document.querySelector('#infoPreview');
-    infoPreviewUl.appendChild(newName);
-    infoPreviewUl.appendChild(newEmail);
-    infoPreviewUl.appendChild(newPhone);
-    infoPreviewUl.appendChild(newAddress);
-    infoPreviewUl.appendChild(newPost)
-
-    // Clear the initial values
-    nameEl.value = "";
-    emailEl.value = "";
-    phoneEl.value = "";
-    addressEl.value = "";
-    postEl.value = "";
-
-    document.querySelector('#submitBTN').disabled = true;
-    document.querySelector('#editBTN').disabled = false;
-    document.querySelector('#continueBTN').disabled = false;
-
-    let editFBtn = document.querySelector('#editBTN');
-    editFBtn.addEventListener('click', edit);
+      let phoneEl = document.querySelector('#phone');
+      let phone = phoneEl.value;
+      let addressEl = document.querySelector('#address');
+      let address = addressEl.value;
+      let postEl = document.querySelector('#code');
+      let post = postEl.value;
+  
+      let newName = document.createElement('li');
+      newName.textContent = `Full Name: ${name}`;
+      let newEmail = document.createElement('li');
+      newEmail.textContent = `Email: ${email}`;
+      let newPhone = document.createElement('li');
+      newPhone.textContent = `Phone Number: ${phone}`;
+      let newAddress = document.createElement('li');
+      newAddress.textContent = `Address: ${address}`;
+      let newPost = document.createElement('li');
+      newPost.textContent = `Postal Code: ${post}`;
+  
+      let infoPreviewUl = document.querySelector('#infoPreview');
+      infoPreviewUl.appendChild(newName);
+      infoPreviewUl.appendChild(newEmail);
+      infoPreviewUl.appendChild(newPhone);
+      infoPreviewUl.appendChild(newAddress);
+      infoPreviewUl.appendChild(newPost)
+  
+      // Clear the initial values
+      nameEl.value = "";
+      emailEl.value = "";
+      phoneEl.value = "";
+      addressEl.value = "";
+      postEl.value = "";
+  
+      document.querySelector('#submitBTN').disabled = true;
+      document.querySelector('#editBTN').disabled = false;
+      document.querySelector('#continueBTN').disabled = false;
+  
+      let editFBtn = document.querySelector('#editBTN');
+      editFBtn.addEventListener('click', edit);
+      
+    }
+    
   });
 
   function edit() {
@@ -102,7 +110,14 @@ function solution() {
     function addFinalMessage() {
       let blockElement2 = document.querySelector('#block');
       let header3 = document.createElement('h3');
-      header3.textContent = 'Thank You For Your Reservation!';
+      let text = 'Thank you for your reservation!'
+      header3.textContent = `${text}`;
       blockElement2.appendChild(header3);
+    };
+
+    function myFunction() {
+      document.querySelector('#fname').required = true;
+      document.querySelector('#email').required = true;
     }
+
   }
