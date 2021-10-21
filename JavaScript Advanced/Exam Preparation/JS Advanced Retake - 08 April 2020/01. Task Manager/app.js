@@ -1,70 +1,67 @@
 function solve() {
-
-    let [addSection, openSection, inProgress, completedP] = Array.from(document.querySelectorAll('section'));
+    let [addSection, openSection, progressSection, completedSection] = document.querySelectorAll('section');
+    
     let addBtn = addSection.querySelector('#add');
     addBtn.addEventListener('click', (e) => {
         e.preventDefault();
+        let task = document.querySelector('#task');
+        let description = document.querySelector('#description');
+        let date = document.querySelector('#date');
 
-        let taskEl = document.querySelector('#task');
-        let descriptionEl = document.querySelector('#description');
-        let dateEl = document.querySelector('#date');
-
-        let h3 = document.createElement('h3');
-        h3.textContent = taskEl.value;
-        let descP = document.createElement('p');
-        descP.textContent = `Description: ${descriptionEl.value}`;
-        let dateP = document.createElement('p');
-        dateP.textContent = `Due Date: ${dateEl.value}`;
-        let buttonsDiv = document.createElement('div');
-        buttonsDiv.className = 'flex';
-        buttonsDiv.innerHTML = `
-        <button class="green">Start</button>
-        <button class="red">Delete</button>`
+        if (task.value === "" || description.value === "" || date.value === "") {
+            return;
+        }
 
         let article = document.createElement('article');
+        let h3 = document.createElement('h3');
+        h3.textContent = task.value;
+        let pDescription = document.createElement('p');
+        pDescription.textContent = `Description: ${description.value}`;
+        let pDate = document.createElement('p');
+        pDate.textContent = `Due Date: ${date.value}`;
+
+        let div = document.createElement('div');
+        div.className = 'flex';
+        let btnStart = document.createElement('button');
+        btnStart.className = 'green';
+        btnStart.textContent = 'Start';
+        let btnDelete = document.createElement('button');
+        btnDelete.className = 'red';
+        btnDelete.textContent = 'Delete';
+
+        btnDelete.addEventListener('click', deleteArticle);
+
+        btnStart.addEventListener('click', (e) => {
+            let btnFinish = document.createElement('button');
+            btnFinish.className = 'orange';
+            btnFinish.textContent = 'Finish';
+
+            btnFinish.addEventListener('click', () => {
+                article.lastElementChild.remove();
+                completedSection.lastElementChild.appendChild(article);
+            });
+
+            article.lastElementChild.children[0].remove();
+            article.lastElementChild.appendChild(btnFinish);
+            progressSection.lastElementChild.appendChild(article);
+        });
+
+        div.appendChild(btnStart);
+        div.appendChild(btnDelete);
+
         article.appendChild(h3);
-        article.appendChild(descP);
-        article.appendChild(dateP);
-        article.appendChild(buttonsDiv)
+        article.appendChild(pDescription);
+        article.appendChild(pDate);
+        article.appendChild(div)
 
         openSection.lastElementChild.appendChild(article);
 
-        taskEl.value = "";
-        descriptionEl.value = "";
-        dateEl.value = "";
-
-        let deleteBtn = openSection.querySelector(".red");
-        deleteBtn.addEventListener('click', deletePanel);
-
-        let startBtn = openSection.querySelector(".green");
-        startBtn.addEventListener('click', sendInProgress);
+        task.value = '';
+        description.value = '';
+        date.value = '';
     });
 
-    function sendInProgress(e) {
-        let inPr = inProgress.querySelector('#in-progress');
-        inPr.remove();
-        let taskP = e.currentTarget.parentNode.parentNode;
-        inProgress.appendChild(taskP);
-        let green = inProgress.querySelector('.green');
-        green.className = 'orange';
-        green.textContent = 'Finish';
-        let flexEl = green.parentElement;
-        flexEl.appendChild(green);
-
-        green.addEventListener('click', completedTask);
-    }
-
-    function deletePanel(e) {
-        e.currentTarget.parentNode.parentNode.remove();
-    }
-
-    function completedTask(e) {
-        let taskC = e.currentTarget.parentNode.parentNode;
-        completedP.appendChild(taskC);
-        let button1 = completedP.querySelector('button');
-        button1.remove();
-        let button2 = completedP.querySelector('button');
-        button2.remove();
+    function deleteArticle(e) {
+        e.target.parentElement.parentElement.remove();
     }
 }
-
