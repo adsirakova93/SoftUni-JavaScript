@@ -46,15 +46,24 @@ class ChristmasDinner {
     }
 
     showAttendance() {
-        result = [];
+        let result = [];
 
         Object.entries(this.guests).forEach(([guestName, dish]) => {
             result.push(`${guestName} will eat ${dish}, which consists of ${this.dishes
                 .find(d => d.recipeName === dish)
                 .productsList.join(', ')}`);
         });
-
         return result.join('\n');
     }
 
+    showAttendance_second_version() {
+        let result = [];
+
+        for (let guest in this.guests) {
+            const dishName = this.guests[guest];
+            const products = this.dishes.find(x => x.recipeName === dishName).products;
+            result.push(`${guest} will eat ${dishName}, which consist of ${products.join(', ')}`);
+        }
+        return result.join('\n');
+    }
 }
